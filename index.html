@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order Your Smoothie</h1>
+        <form id="smoothieForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="base">Base:</label>
+            <select id="base" name="base">
+                <option value="milk" data-price="1.00">Milk ($1.00)</option>
+                <option value="yogurt" data-price="1.50">Yogurt ($1.50)</option>
+                <option value="water" data-price="0.50">Water ($0.50)</option>
+                <option value="juice" data-price="2.00">Juice ($2.00)</option>
+            </select>
+
+            <label for="fruit">Fruits:</label>
+            <select id="fruit" name="fruit" multiple>
+                <option value="banana" data-price="0.50">Banana ($0.50)</option>
+                <option value="strawberry" data-price="0.75">Strawberry ($0.75)</option>
+                <option value="blueberry" data-price="1.00">Blueberry ($1.00)</option>
+                <option value="mango" data-price="1.25">Mango ($1.25)</option>
+                <option value="pineapple" data-price="1.00">Pineapple ($1.00)</option>
+            </select>
+
+            <label for="extra">Extras:</label>
+            <select id="extra" name="extra" multiple>
+                <option value="protein" data-price="1.50">Protein Powder ($1.50)</option>
+                <option value="chia" data-price="0.75">Chia Seeds ($0.75)</option>
+                <option value="honey" data-price="0.50">Honey ($0.50)</option>
+                <option value="almond" data-price="1.00">Almond Butter ($1.00)</option>
+            </select>
+
+            <label>Size:</label>
+            <div class="radio-group">
+                <input type="radio" id="small" name="size" value="small" data-price="3.00">
+                <label for="small">Small</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="medium" name="size" value="medium" data-price="4.00">
+                <label for="medium">Medium</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="large" name="size" value="large" data-price="5.00">
+                <label for="large">Large</label>
+            </div>
+
+            <button type="button" id="orderButton">Order</button>
+            <button type="button" id="orderAgainButton" style="display: none;">Order Again</button>
+        </form>
+
+        <div id="orderSummary"></div>
+        <div id="smoothieImage">
+            <img id="milkImage" src="images/milk_smoothie.jpeg" alt="Milk Smoothie Image" style="display: none;">
+            <img id="yogurtImage" src="images/yogurt_smoothie.jpeg" alt="Yogurt Smoothie Image" style="display: none;">
+            <img id="waterImage" src="images/water_smoothie.jpeg" alt="Water Smoothie Image" style="display: none;">
+            <img id="juiceImage" src="images/juice_smoothie.jpeg" alt="Juice Smoothie Image" style="display: none;">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
